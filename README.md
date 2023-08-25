@@ -1,3 +1,11 @@
+# NoteIt - note app
+NoteIt is a modern and intuitive note-saving application that empowers users to efficiently organize, manage, and secure
+theirimportant notes and thoughts. Notate offers a seamless and secure user experience that prioritizes data privacy
+and user convenience.
+NoteIt stands as a testament to the capabilities of the React ecosystem, paired with powerful backend technologies like
+Node.js, Express.js, and MongoDB. The integration of JWT and Bcrypt ensures the highest level of security for user
+accounts and data, giving users peace of mind while using the app.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
