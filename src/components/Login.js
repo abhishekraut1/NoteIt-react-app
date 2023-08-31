@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 function Login(props) {
     const [credentials, setCredentials] = useState({ email: "", password: "" });
     const navigate = useNavigate();
-    
-    const handleOnSubmit = async (e) => {
+     
+    const handleOnSubmit = async (e) => { 
         e.preventDefault();
         // API CALL
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+        const response = await fetch("https://noteit-backend-blje.onrender.com/api/auth/login", {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             headers: {
                 "Content-Type": "application/json"

@@ -9,25 +9,58 @@ function Signup(props) {
     e.preventDefault();
 
     // API CALL
-    const response = await fetch("http://localhost:5000/api/auth/createuser", {
-        method: "POST", // *GET, POST, PUT, DELETE, etc.
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({name:credentials.name, email: credentials.email, password: credentials.password }), // body data type must match "Content-Type" header
+//     const response = await ("https://noteit-backend-blje.onrender.com/api/auth/createuser", {
+//         method: "POST", // *GET, POST, PUT, DELETE, etc.
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({name:credentials.name, email: credentials.email, password: credentials.password }), // body data type must match "Content-Type" header
+//     });
+//     const json = await response.json();
+//     console.log(json);
+
+//     if(json.success){
+//         // Save the auth-token and redirect
+//         localStorage.setItem('token', json.authtoken)
+//         navigate('/');
+//         props.showAlert("Account created successfully.","success ")
+//     }else{
+//         props.showAlert("Invalid Details.","danger")
+//     }
+// }
+try {
+    const response = await fetch("https://noteit-backend-blje.onrender.com/api/auth/createuser", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: credentials.name,
+        email: credentials.email,
+        password: credentials.password
+      })
     });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
     const json = await response.json();
     console.log(json);
 
-    if(json.success){
-        // Save the auth-token and redirect
-        localStorage.setItem('token', json.authtoaken)
-        navigate('/');
-        props.showAlert("Account created successfuly.","success ")
-    }else{
-        props.showAlert("Invalid Details.","danger")
+    if (json.success) {
+      // Save the auth-token and redirect
+      localStorage.setItem('token', json.authtoken);
+      navigate('/');
+      props.showAlert("Account created successfully.", "success");
+    } else {
+      props.showAlert("Invalid Details.", "danger");
     }
-}
+  } catch (error) {
+    console.error("Error:", error);
+    props.showAlert("An error occurred.", "danger");
+  }
+};
 
 const onChange = (e) => {
   setCredentials({ ...credentials, [e.target.name]: e.target.value });

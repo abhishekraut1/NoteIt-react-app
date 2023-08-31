@@ -17,6 +17,7 @@ const Notes = (props) => {
             navigate('/login');
         // eslint-disable-next-line 
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const ref = useRef(null);
@@ -40,7 +41,7 @@ const Notes = (props) => {
     }
 
 return (
-<> 
+<>  
 
     <button type="button" ref={ref} className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Launch demo modal

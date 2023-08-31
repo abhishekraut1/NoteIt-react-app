@@ -3,7 +3,7 @@ import { useState } from "react";
 
 
 const NoteState = (props)=>{
-    let host = "http://localhost:5000";
+    let host = "https://noteit-backend-blje.onrender.com";
 
     let initialNotes = []
     const [notes, setNotes] = useState(initialNotes)
@@ -50,6 +50,7 @@ const NoteState = (props)=>{
         });
 
         const json = await response.json(); // parses JSON response into native JavaScript objects
+        console.log(json)
 
         const newNotes = notes.filter((note)=>{
             return note._id !== id;
@@ -68,6 +69,7 @@ const NoteState = (props)=>{
             body: JSON.stringify({title,description,tag}), // body data type must match "Content-Type" header
         });
          const json = await response.json(); // parses JSON response into native JavaScript objects
+        console.log(json)
 
         let newNotes = JSON.parse(JSON.stringify(notes));
         // Logic to edit in client
