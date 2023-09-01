@@ -1,4 +1,4 @@
-# NoteIt - note app
+# NoteIt
 NoteIt is a modern and intuitive note-saving application that empowers users to efficiently organize, manage, and secure
 theirimportant notes and thoughts. Notate offers a seamless and secure user experience that prioritizes data privacy
 and user convenience.
