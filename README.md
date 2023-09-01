@@ -15,13 +15,8 @@ and user convenience.
 
 # Installation
 ## Environment Variables
-To run this project, you will need to add the following environment variables to your .env file <br />
+To run this project, you will need to add the following environment variables to your .env file. <br />
 `MONGODB_URL` <br />
-initialize each variable properly.
-
-## Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
