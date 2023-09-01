@@ -1,10 +1,12 @@
 const express = require('express');
 const connectToMongo = require('./db');
 var cors = require('cors')
+ 
+require('dotenv').config();
 
-
-
-connectToMongo(); 
+const mongoURI = process.env.MONGODB_URL
+console.log(mongoURI)
+connectToMongo(mongoURI); 
 
 const app = express();
 app.use(cors())
