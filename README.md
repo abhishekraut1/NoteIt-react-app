@@ -1,5 +1,5 @@
 # NoteIt
-This Project is made in MERN Stack ( MongoDB , Express , React ,Node ).
+This Project is made in MERN Stack ( MongoDB , Express , React ,Node ). <br />
 Live Link -- [https://noteit-webapp.netlify.app](https://noteit-webapp.netlify.app)
 
 ## Description
