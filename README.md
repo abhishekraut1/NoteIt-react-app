@@ -1,10 +1,10 @@
 # NoteIt
-This Project is made in MERN Stack ( MongoDB , Express , React ,Node )
+This Project is made in MERN Stack ( MongoDB , Express , React ,Node ).
 Live Link -- [https://noteit-webapp.netlify.app](https://noteit-webapp.netlify.app)
 
 ## Description
 NoteIt is a modern and intuitive note-saving application that empowers users to efficiently organize, manage, and secure
-theirimportant notes and thoughts. Notate offers a seamless and secure user experience that prioritizes data privacy
+their important notes and thoughts. NoteIt offers a seamless and secure user experience that prioritizes data privacy
 and user convenience.
 
 # Features
